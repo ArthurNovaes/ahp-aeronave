@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Método AHP - Análise de Processo Hierárquico</title>	
+		<script type="text/javascript" src="AHP.js"></script> 	
+		<style type="text/css" title="mystyles" media="all">
+		<!--
+
+		body{
+			background-color: #77BA99;
+			margin:50px;
+			font-family: Verdana, sans-serif;
+			font-size: 18px;
+			line-height: 180%;
+			text-align: left;
+			visibility: visible;
+		}
+
+		p{
+			color: #FFFFFF;
+			font-weight: bold;
+			text-align: left;
+			font-size: 18px;
+		}
+		
+		h2, h3{
+			color: #FFFFFF;
+			font-family: Helvetica, sans-serif;
+		}
+		h4{
+			color: #FFFFFF;
+			font-size: 18px;
+			font-family: Helvetica, sans-serif;
+		}
+
+		table{
+			font-size: 18px;
+			border-width:0px;
+			border-style:solid;
+			border-spacing:0px;
+			border-color:white;
+			border-collapse: collapse;
+			background-color:#0B4F6C;
+        	color:#fff;
+		}
+
+
+	      table td, th
+	      {
+	        border:1px solid #7F583A;
+	        padding:3px 7px 2px 7px;
+	      }
+	    
+
+		label {
+			display:block;
+			width:15px;
+		}
+
+		#page{
+			color: #FFFFFF;
+			font-size: 18px;
+			font-family: Helvetica, sans-serif;
+			text-align: left;
+			visibility: visible;
+			background-color: #262730;;
+			padding: 10px;
+			height: auto;
+
+		}
+
+		#lbcriterios, #lbalternativas{
+			font-weight: bold;
+		}
+
+		-->
+		</style>
+	</head>
+
+	<body>
+	<body onload="gerarPreferencias()">
+		<div align="center">
+			<div id = "header"><h2>Método AHP - Análise de Processo Hierárquico</h2>
+							   <h3>Escolha de Aeronave - ESTUDO DE OTIMIZAÇÃO DA ESCOLHA DE AERONAVE PARA OFFSHORE</h3>
+							   <img src="4.2.1.png" height="500px">
+			</div>
+			<div id="page">
+				<div class = "inicio" style: "color:0000FF" id="ini">
+			  		
+			  	</div>
+	
+				<div id="dados_complementares" class="cont" style="display:none">
+					<table id="dados_comp" >
+						
+					</table>
+					<input type="button" class="btnAcao" value="Matrizes de preferencia" id="btnMatPrefs" style="display:none" onclick="gerarPreferencias();" />
+				</div>
+				
+				<div id="calculo1" style="display:none" >
+					<p>Calculo dos Critérios</p>
+				</div>
+	
+				<div class="cont" id="contMatPref" style="display:none">
+					
+					<h1>Matrizes de preferência</h1>
+					<div id="mats">
+						<div id="matprefs"></div>
+					</div>
+					<div id="mpa">
+						
+					</div>
+					<input type="button" class="btnAcao" value="Calcular Média" id="btnNormalizar" style="display:none" onclick="gerarMatrizDePreferencias();" />
+				</div>
+				
+				<div class="cont" id="contCompCrit" style="display:none">
+					<p>Matriz de comparação de critérios</p>
+					<div id="matCompCrit"></div>
+					<div id="mediaCompCrit"></div>
+					<input type="button" class="btnAcao" value="Calcular Média" id="btnCalcCompCrit" style="display:none" onclick="calcularCompCrit();" />
+				</div>
+				
+				<div class="cont" id="contResultado" style="display:none">
+					<div class="tit">Resultado</div>
+					<div id="tabResultado"></div>
+					<input type="button" class="btnAcao" value="Obter Resultado" id="btnObterResultado" style="display:none" onclick="mostraResultado();" />
+				</div>
+		</div>
+	</body>
+</html>
